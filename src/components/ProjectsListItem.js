@@ -11,6 +11,7 @@ const ProjectsListItem = ({dispatch, id, description, note, skills }) => (
 		<button onClick={() => {
 			dispatch(removeProject({ id }));
 		}}>Remove Project </button>
+		<Link to={`/project/${id}`}>Show Details</Link>
 	</div>
 );
 

@@ -1,10 +1,19 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import ProfileForm from './ProfileForm';
+import { addProfile } from '../actions/profiles';
 
 
-const CreateProfile = () => (
+const CreateProfile = (props) => (
 	<div>
-		<h1>This is CreateProfile</h1>
+		<h2>Create Profile</h2>
+		<ProfileForm 
+			onSubmit={(profile) => {
+				props.dispatch(addProfile(profile));
+				props.history.push('/');
+			}}
+		/>
 	</div>
 );
 
-export default CreateProfile;
+export default connect()(CreateProfile);
