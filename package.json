@@ -31,12 +31,15 @@
     "live-server": "^1.2.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
     "uuid": "^3.2.1",
     "webpack": "^3.10.0"
   },
   "devDependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "webpack-dev-server": "^2.11.1"
   }
 }
