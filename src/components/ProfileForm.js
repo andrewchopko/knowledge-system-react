@@ -5,6 +5,7 @@ export default class ProfileForm extends React.Component {
 		super(props);
 
 		this.state = {
+			userId: props.userId,
 			name: props.profile ? props.profile.name : '',
 			lastName: props.profile ? props.profile.lastName : '',
 			skillset: props.profile ? props.profile.skillset : [],
@@ -35,6 +36,13 @@ export default class ProfileForm extends React.Component {
 		} else {
 			this.setState(() => ({ error: ''}));
 			this.props.onSubmit({
+				userId: this.state.userId,
+				name: this.state.name,
+				lastName: this.state.lastName,
+				skillset: this.state.skillset
+			});
+			console.log({
+				userId: this.state.userId,
 				name: this.state.name,
 				lastName: this.state.lastName,
 				skillset: this.state.skillset
@@ -51,15 +59,14 @@ export default class ProfileForm extends React.Component {
 						type="text"
 						placeholder="Name"
 						autoFocus
-						value={this.state.description}
+						value={this.state.name}
 						onChange={this.onNameChange}
 					/>
 					<input 
 						type="text"
 						placeholder="Last name"
-						autoFocus
-						value={this.state.description}
-						onChange={this.onNameChange}
+						value={this.state.lastName}
+						onChange={this.onLastNameChange}
 					/>
 					<input 
 						placeholder="Your skills"

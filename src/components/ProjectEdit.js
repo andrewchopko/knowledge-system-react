@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ProjectForm from './ProjectForm';
-import { editProject } from '../actions/projects';
+import { startEditProject } from '../actions/projects';
 
 const ProjectEdit = (props) => {
 	return (
@@ -10,7 +10,7 @@ const ProjectEdit = (props) => {
 			<ProjectForm
 				project={props.project}
 				onSubmit={(project) => {
-					props.dispatch(editProject(props.project.id, project));
+					props.dispatch(startEditProject(props.project.id, project));
 					props.history.push('/');
 				}}
 			/>

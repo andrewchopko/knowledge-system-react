@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ProfileForm from './ProfileForm';
-import { editProfile } from '../actions/profiles';
+import { startEditProfile } from '../actions/profiles';
 
 const ProfileEdit = (props) => {
 	return (
@@ -10,7 +10,7 @@ const ProfileEdit = (props) => {
 			<ProfileForm
 				profile={props.profile}
 				onSubmit={(profile) => {
-					props.dispatch(editProfile(props.profile.id, profile));
+					props.dispatch(startEditProfile(props.profile.id, profile));
 					props.history.push('/');
 				}}
 			/>

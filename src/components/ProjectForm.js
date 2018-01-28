@@ -65,7 +65,7 @@ export default class ProjectForm extends React.Component {
 						value={this.state.skills.join(' ')}
 						onChange={this.onSkillsChange}
 					/>
-					<button>Add New Project</button>
+					<button>Save</button>
 				</form>
 			</div>
 		);

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { removeProject } from '../actions/projects';
+import { startRemoveProject } from '../actions/projects';
 
 const ProjectsListItem = ({dispatch, id, description, note, skills }) => (
 	<div>
@@ -9,7 +9,7 @@ const ProjectsListItem = ({dispatch, id, description, note, skills }) => (
 		<p>{note}</p>
 		<div>{skills.join(' ')}</div>
 		<button onClick={() => {
-			dispatch(removeProject({ id }));
+			dispatch(startRemoveProject({ id }));
 		}}>Remove Project </button>
 		<Link to={`/project/${id}`}>Show Details</Link>
 	</div>

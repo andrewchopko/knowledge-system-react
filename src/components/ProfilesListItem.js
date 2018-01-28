@@ -5,10 +5,10 @@ import { editProfile } from '../actions/profiles'
 const ProfilesListItem = (props) => {
 	return (
 		<div>
-			<h5>{props.name + " " + props.lastName}</h5>
+			<h5>`${props.name} ${props.lastName}`</h5>
 			<div>{props.skillset.join(' ')}</div>
 			{!props.projectId && <button onClick={() => {
-				props.dispatch(editProfile( props.id, { projectId: props.project }));
+				props.dispatch(startEditProfile( props.id, { projectId: props.project }));
 			}}>Add developer to this project</button>}
 	</div>
 	);

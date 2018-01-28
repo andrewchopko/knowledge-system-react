@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ProjectForm from './ProjectForm';
-import { addProject } from '../actions/projects';
+import { startAddProject } from '../actions/projects';
 
 
 const CreateProject = (props) => (
@@ -9,7 +9,7 @@ const CreateProject = (props) => (
 		<h2>Create Project</h2>
 		<ProjectForm 
 			onSubmit={(project) => {
-				props.dispatch(addProject(project));
+				props.dispatch(startAddProject(project));
 				props.history.push('/');
 			}}
 		/>
