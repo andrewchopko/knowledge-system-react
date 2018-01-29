@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { editProfile } from '../actions/profiles'
+import { startEditProfile } from '../actions/profiles'
 
 const ProfilesListItem = (props) => {
 	return (

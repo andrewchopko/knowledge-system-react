@@ -1,0 +1,43 @@
+.header {
+	background: #333;
+	margin-bottom: 1rem;
+	color: #333;
+	padding: 1rem 5rem;
+}
+
+.header__title {
+	color: #fcffd0;
+	font-size: 2.5rem;
+	padding: 1rem 0;
+}
+
+.header__menu {
+	display: inline-flex;
+	padding: 2rem 0;
+}
+
+.header__menu-link {
+	color: #fcffd0;
+    text-decoration: none;
+    padding: .2rem .1rem;
+    margin-right: 1rem;
+}
+
+.is-active {
+	font-weight: 700;
+	color: #e0a200;
+}
+
+.header__top-block {
+	display: flex;
+    justify-content: space-between;
+}
+
+.header__top-block__button {
+	border: none;
+	background: lightseagreen;
+	font-size: 2rem;
+	margin: 1rem;
+	padding: .5rem;
+	color: white;
+}

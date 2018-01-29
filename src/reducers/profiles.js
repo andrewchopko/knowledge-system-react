@@ -21,6 +21,8 @@ const profilesReducer = (state = profileReducerDefaultState, action ) => {
 			});
 		case 'REMOVE_PROFILE':
 			return state.filter(({ id }) => id !== action.id);
+		case 'SET_PROFILES':
+			return action.profiles;
 		default:
 			return state;
 	}

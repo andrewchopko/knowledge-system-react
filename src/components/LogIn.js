@@ -39,23 +39,29 @@ export default class LogIn extends React.Component {
 
 		return (
 			<div>
-				<h2>Log In</h2>
+				<h2 className="login-form__title">Authentification</h2>
 				{this.state.error && <p>{this.state.error}</p>}
-				<form onSubmit={this.onSubmit}>
-					<input 
-						type="text"
-						placeholder="E-mail"
-						autoFocus
-						value={this.state.email}
-						onChange={this.onEmailChange}
-					/>
-					<input 
-						type="text"
-						placeholder="Password"
-						value={this.state.password}
-						onChange={this.onPasswordChange}
-					/>
-					<button>Log In</button>
+				<form className="login-form" onSubmit={this.onSubmit}>
+					<div>
+						<input className="login-form__item"
+							type="text"
+							placeholder="E-mail"
+							autoFocus
+							value={this.state.email}
+							onChange={this.onEmailChange}
+						/>
+					</div>
+					<div>
+						<input className="login-form__item"
+							type="text"
+							placeholder="Password"
+							value={this.state.password}
+							onChange={this.onPasswordChange}
+						/>
+					</div>
+					<div>
+						<button className="login-form__button">Log In</button>
+					</div>
 				</form>
 			</div>
 		);

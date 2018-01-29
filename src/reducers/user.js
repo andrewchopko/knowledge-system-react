@@ -11,7 +11,10 @@ const userReducer = (state = userReducerDefaultState, action) => {
 		case 'LOGIN':
 			return {
 				state,
-				...action.login
+				id: action.login.id,
+				email: action.login.email,
+				password:action.login.password,
+				isManager: action.login.isManager
 			};
 		case 'LOGOUT':
 			return userReducerDefaultState;

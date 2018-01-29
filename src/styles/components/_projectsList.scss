@@ -1,0 +1,56 @@
+.projects-list {
+	display: block;
+}
+
+.projects-list__item {
+    background: #1e9165;
+    padding: 1rem 1rem;
+    margin: 2rem 0;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.projects-list__item-title {
+	text-align: center;
+	color: white;
+    text-decoration: none;
+    font-size: 4.5rem;
+    &:hover {
+    	text-decoration: underline;
+    	text-decoration-color: #e74;
+    }
+}
+
+.projects-list__item-description {
+	color: white;
+}
+
+.projects-list__item-subtitle {
+	font-size: 2.5rem;
+    color: palegoldenrod;
+    margin: 1% 0;
+    font-weight: 700;
+}
+
+.projects-list__item-description {
+	color: #3c3c3c;
+    font-size: 1.9rem;
+}
+
+.projects-list__item-skills {
+	font-weight: 700;
+    color: #222;
+}
+
+.projects-list__item__remove-button {
+	margin: 1rem 0;
+    font-size: 2rem;
+    border: none;
+    background: #e0a200;
+    padding: 1%;
+    border-radius: 5px;
+    &:hover {
+    	background: firebrick;
+    	cursor: pointer;
+    }
+}

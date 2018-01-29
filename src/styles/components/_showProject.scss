@@ -1,0 +1,31 @@
+.project-top__wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+.projec-top__edit-button {
+	color: white;
+    font-size: 2.5rem;
+    background: #00bd62;
+    padding: .1rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    &:hover {
+    	color: #000;
+    	background: #f74;
+    }
+}
+
+.project-top__title {
+	color: #3c3c3c;
+	margin-bottom: 1rem;
+	h1 {
+		font-size: 2.9rem;
+	}
+}
+
+.project-layout {
+	background: #eee;
+    padding: 2rem;
+    border-radius: 10px;
+}

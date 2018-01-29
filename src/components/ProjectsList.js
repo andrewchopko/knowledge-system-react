@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import ProjectsListItem from './ProjectsListItem';
 
 const ProjectsList = (props) => (
-	<div>
-		<h2>List of all Projects</h2>
+	<div className="wrapper projects-list">
+		<h2>All Projects</h2>
 		{props.projects.map((project) => {
 			return <ProjectsListItem key={project.id} { ...project } />
 		})}

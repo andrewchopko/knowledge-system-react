@@ -5,9 +5,11 @@ import configureStore from './store/configureStore';
 import AppRouter from './routers/AppRouter';
 import { startSetProjects } from './actions/projects';
 import { startLogin, signUp } from './actions/user';
+import { startSetProfiles } from './actions/profiles';
 import SignUp from './components/SignUp';
 import LogIn from './components/LogIn';
 import WelcomePage from './components/WelcomePage';
+import './styles/style.scss';
 
 const store = configureStore();
 
@@ -30,3 +32,5 @@ ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));
 store.dispatch(startSetProjects()).then(() => {
 	ReactDOM.render(jsx, document.getElementById('app'));
 });
+
+store.dispatch(startSetProfiles());

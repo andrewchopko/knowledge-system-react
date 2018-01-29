@@ -31,7 +31,7 @@ export const signUp = (signUpData = {}) => {
 	};
 };
 
-export const startLogin = (loginData = {}) => {
+export const startLogin = (loginDataOne = {}) => {
 	return (dispatch) => {
 		return database.ref('users').once('value').then((snapshot) => {
 			const loginD = [];
@@ -43,8 +43,8 @@ export const startLogin = (loginData = {}) => {
 				});
 			});
 			console.log("all users", loginD);
-			const actualData = loginD.find((login) => login.email === loginData.email && login.password === loginData.password);
-			dispatch(login({ login: actualData }));
+			const actualData = loginD.find((login) => login.email === loginDataOne.email && login.password === loginDataOne.password);
+			dispatch(login(actualData));
 			console.log("data", actualData);
 		});
 	};

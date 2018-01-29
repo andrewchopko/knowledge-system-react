@@ -6,22 +6,24 @@ import { startLogin, signUp } from '../actions/user';
 
 const WelcomPage = (props) => {
 	return (
-		<div>
+		<div className="wrapper">
 			<h1>Welcome Page</h1>
-			<LogIn 
-				onSubmit={(user) => {
-					props.dispatch(startLogin(user));
-					props.history.push('/forward');
-					console.log("onLogin", user);
-				}}
-			/>
-			<SignUp 
-				onSubmit={(user) => {
-					props.dispatch(signUp(user));
-					{ user.isManager ? props.history.push('/projects') : props.history.push('/profile')};
-					console.log("onSubmit", user);
-				}}
-			/>
+			<div className="welcome-page__form-wrapper">
+				<LogIn 
+					onSubmit={(user) => {
+						props.dispatch(startLogin(user)).then(() => {
+							props.history.push('/forward');
+						});
+					}}
+				/>
+				<SignUp 
+					onSubmit={(user) => {
+						props.dispatch(signUp(user)).then(() => {
+							props.history.push('/forward');
+						});
+					}}
+				/>
+			</div>
 		</div>
 	);
 };

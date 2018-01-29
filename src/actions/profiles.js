@@ -65,3 +65,25 @@ export const startRemoveProfile = ({ id } = {}) => {
 		});
 	};
 };
+
+export const setProfiles = (profiles) => ({
+	type: 'SET_PROFILES',
+	profiles
+});
+
+export const startSetProfiles = () => {
+	return (dispatch) => {
+		return database.ref('profiles').once('value').then((snapshot) => {
+			const profiles = [];
+
+			snapshot.forEach((childSnaphot) => {
+				profiles.push({
+					id: childSnaphot.key,
+					...childSnaphot.val()
+				});
+			});
+
+			dispatch(setProfiles(profiles));
+		});
+	};
+}
