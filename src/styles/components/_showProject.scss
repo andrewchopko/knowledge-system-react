@@ -24,8 +24,24 @@
 	}
 }
 
-.project-layout {
+.project-layout, .profiles-wrapper {
 	background: #eee;
     padding: 2rem;
     border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.project-top__description-text, .project-top__skills-text {
+	font-size: 2.5rem;
+	color: #3c3c3c;
+	margin-top: 1rem;
+}
+
+.project-top__description {
+	font-size: 1.9rem;
+}
+
+.project-top__skills {
+	font-size: 2rem;
+	color: #e74;
 }

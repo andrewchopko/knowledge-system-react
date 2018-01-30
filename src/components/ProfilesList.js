@@ -4,17 +4,19 @@ import ProfilesListItem from './ProfilesListItem';
 import { getDevelopersForProject, getDevsAtProject } from '../selectors/projects';
 
 const ProfilesList = (props) => (
-	<div>
+	<div className="profiles-layout">
 		<div>
-			<h2>Free Developers for this project</h2>
+			<div className="profiles-layout__title">Available Developers</div>
 			{props.freeDevs.map((profile) => {
 				return <ProfilesListItem key={profile.id} project={props.projectId} { ...profile } />
 			})}
 		</div>
-		<div>Developers at this project</div>
-			{props.devsAtProject.map((profile) => {
-				return <ProfilesListItem key={profile.id} { ...profile } />
-			})}
+		<div>
+			<div className="profiles-layout__title">Project Team</div>
+				{props.devsAtProject.map((profile) => {
+					return <ProfilesListItem key={profile.id} { ...profile } />
+				})}
+		</div>
 	</div>
 );
 

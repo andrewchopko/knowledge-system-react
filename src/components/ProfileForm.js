@@ -53,27 +53,27 @@ export default class ProfileForm extends React.Component {
 	render(){
 		return (
 			<div>
-				{this.state.error && <p>{this.state.error}</p>}
-				<form onSubmit={this.onSubmit}>
-					<input 
+				{this.state.error && <p className="error-notification">{this.state.error}</p>}
+				<form className="profile-form" onSubmit={this.onSubmit}>
+					<input className="profile-form__item"
 						type="text"
 						placeholder="Name"
 						autoFocus
 						value={this.state.name}
 						onChange={this.onNameChange}
 					/>
-					<input 
+					<input className="profile-form__item"
 						type="text"
 						placeholder="Last name"
 						value={this.state.lastName}
 						onChange={this.onLastNameChange}
 					/>
-					<input 
+					<input className="profile-form__item"
 						placeholder="Your skills"
 						value={this.state.skillset.join(' ')}
 						onChange={this.onSkillsetChange}
 					/>
-					<button>Create Profile</button>
+					<button className="profile-form__button">Create Profile</button>
 				</form>
 			</div>
 		);

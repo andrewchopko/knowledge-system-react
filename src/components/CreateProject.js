@@ -5,8 +5,8 @@ import { startAddProject } from '../actions/projects';
 
 
 const CreateProject = (props) => (
-	<div>
-		<h2>Create Project</h2>
+	<div className="wrapper">
+		<h2 className="project-page__title">Create Project</h2>
 		<ProjectForm 
 			onSubmit={(project) => {
 				props.dispatch(startAddProject(project));

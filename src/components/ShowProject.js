@@ -14,10 +14,16 @@ const ShowProject = (props) => {
 						<Link className="projec-top__edit-button" to={`/project/${props.project.id}/edit`}>Edit</Link>
 					</div>
 				</div>
-				<div>{props.project.note}</div>
-				<div>{props.project.skills.join(' ')}</div>
+				<div>
+					<div className="project-top__description-text">Description</div>
+					<div className="project-top__description">{props.project.note}</div>
+				</div>
+				<div>
+					<div className="project-top__skills-text">Required skills</div>
+					<div className="project-top__skills">{props.project.skills.join(' ')}</div>
+				</div>
 			</div>
-			<div>
+			<div className="profiles-wrapper">
 				<ProfilesList projectId={props.project.id}/>
 			</div>
 		</div>

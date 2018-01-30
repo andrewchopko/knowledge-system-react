@@ -7,7 +7,7 @@ import { startLogin, signUp } from '../actions/user';
 const WelcomPage = (props) => {
 	return (
 		<div className="wrapper">
-			<h1>Welcome Page</h1>
+			<h1 className="page__title">Provide your credentials, please!</h1>
 			<div className="welcome-page__form-wrapper">
 				<LogIn 
 					onSubmit={(user) => {
@@ -26,6 +26,6 @@ const WelcomPage = (props) => {
 			</div>
 		</div>
 	);
-};
+}; 
 
 export default connect()(WelcomPage);

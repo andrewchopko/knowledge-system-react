@@ -1,0 +1,47 @@
+.project-form {
+	display: block;
+	margin: 2rem 0;
+}
+ 
+.project-form__item, .project-form__item-description {
+	margin-bottom: 1rem;
+	font-family: 'Ubuntu', sans-serif;
+	display: block;
+	margin: 1rem;
+	padding: .5rem;
+	border: 1px solid #249e8f;
+	border-radius: 2px;
+	font-size: 2.3rem;
+	outline: none;
+	width: 100%;
+	&:focus {
+		outline: 0;
+  		border: 1px solid #e74;
+	}
+}
+
+.project-form__item-description {
+	resize: none;
+	width: 100%;
+	height: 25vh;
+}
+
+.project-form__button {
+	border: none;
+	background: lightseagreen;
+	font-size: 2rem;
+	margin: 1rem;
+	padding: .5rem;
+	color: white;
+}
+
+.project-form__button {
+	cursor: pointer;
+	&:active {
+		background: #e74;
+	}
+}
+
+.project-page__title {
+	padding: 1rem;
+}

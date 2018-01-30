@@ -8,6 +8,7 @@ export const login = (login) => {
 };
 
 export const logout = () => {
+	console.log("logout");
 	return {
 		type: 'LOGOUT'
 	};
@@ -22,7 +23,7 @@ export const signUp = (signUpData = {}) => {
 		} = signUpData;
 
 		const loginData = { email, password, isManager };
-		database.ref('users').push(loginData).then((ref) => {
+		return database.ref('users').push(loginData).then((ref) => {
 			dispatch(login({
 				id: ref.key,
 				...loginData

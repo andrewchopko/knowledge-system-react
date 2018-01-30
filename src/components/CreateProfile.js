@@ -5,13 +5,14 @@ import { startAddProfile } from '../actions/profiles';
 
 
 const CreateProfile = (props) => (
-	<div>
-		<h2>Create Profile</h2>
+	<div className="wrapper">
+		<h2 className="page__title">Create Profile</h2>
 		<ProfileForm
 			userId = {props.user.id} 
 			onSubmit={(profile) => {
-				props.dispatch(startAddProfile(profile));
-				props.history.push('/');
+				props.dispatch(startAddProfile(profile)).then(() => {
+					props.history.push(`/profile/${props.user.id}`);
+				});
 			}}
 		/>
 	</div>

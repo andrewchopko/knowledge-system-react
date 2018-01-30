@@ -40,7 +40,7 @@ export default class LogIn extends React.Component {
 		return (
 			<div>
 				<h2 className="login-form__title">Authentification</h2>
-				{this.state.error && <p>{this.state.error}</p>}
+				{this.state.error && <p className="error-notification">{this.state.error}</p>}
 				<form className="login-form" onSubmit={this.onSubmit}>
 					<div>
 						<input className="login-form__item"

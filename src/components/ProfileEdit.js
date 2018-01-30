@@ -5,8 +5,8 @@ import { startEditProfile } from '../actions/profiles';
 
 const ProfileEdit = (props) => {
 	return (
-		<div>
-			<h2>Edit Profile</h2>
+		<div className="wrapper">
+			<h2 className="page__title">Edit Profile</h2>
 			<ProfileForm
 				profile={props.profile}
 				onSubmit={(profile) => {

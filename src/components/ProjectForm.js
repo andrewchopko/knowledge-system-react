@@ -41,31 +41,31 @@ export default class ProjectForm extends React.Component {
 			});
 		}
 	}
-
+ 
 	render(){
 		return (
 			<div>
 				{this.state.error && <p>{this.state.error}</p>}
-				<form onSubmit={this.onSubmit}>
-					<input 
+				<form className="project-form" onSubmit={this.onSubmit}>
+					<input className="project-form__item"
 						type="text"
 						placeholder="Description"
 						autoFocus
 						value={this.state.description}
 						onChange={this.onDescriptionChange}
 					/>
-					<textarea 
+					<textarea className="project-form__item-description"
 						placeholder="Note"
 						value={this.state.note}
 						onChange={this.onNoteChange}
 						>
 					</textarea>
-					<input 
+					<input className="project-form__item"
 						placeholder="Required skills for project"
 						value={this.state.skills.join(' ')}
 						onChange={this.onSkillsChange}
 					/>
-					<button>Save</button>
+					<button className="project-form__button">Save</button>
 				</form>
 			</div>
 		);

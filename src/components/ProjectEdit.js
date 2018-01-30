@@ -5,8 +5,8 @@ import { startEditProject } from '../actions/projects';
 
 const ProjectEdit = (props) => {
 	return (
-		<div>
-			<h2>Edit Project</h2>
+		<div className="wrapper">
+			<h2 className="project-page__title">Edit Project</h2>
 			<ProjectForm
 				project={props.project}
 				onSubmit={(project) => {

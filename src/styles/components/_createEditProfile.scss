@@ -1,9 +1,13 @@
-.login-form {
+.page__title {
+	padding: 1rem;
+}
+
+.profile-form {
 	display: block;
 	margin: 2rem 0;
 }
 
-.login-form__item {
+.profile-form__item {
 	margin-bottom: 1rem;
 	font-family: 'Ubuntu', sans-serif;
 	display: block;
@@ -18,7 +22,7 @@
 	}
 }
 
-.login-form__button {
+.profile-form__button {
 	border: none;
 	background: lightseagreen;
 	font-size: 2rem;
@@ -30,25 +34,15 @@
 	}
 }
 
-.login-form__select {
-	font-size: 2rem;
-    border: none;
-    background: none;
-    outline: none;
-    margin: .5rem 1.2rem;
-    color: #555;
-}
-
-.login-form__title{
-	text-align: center;
+.profile-error {
+	padding-top: 20rem;
+    font-size: 4rem;
+    color: #888;
+    text-align: center;
 }
 
 .error-notification {
 	color: red;
     text-align: center;
     padding: 1rem 2rem;
-}
-
-.logo-link {
-	text-decoration: none;
 }

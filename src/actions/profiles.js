@@ -30,7 +30,7 @@ export const startAddProfile = (profileData = {}) => {
 		} = profileData;
 
 		const profile = { userId, name, lastName, skillset, projectId };
-		database.ref('profiles').push(profile).then((ref) => {
+		return database.ref('profiles').push(profile).then((ref) => {
 			dispatch(addProfile({
 				id: ref.key,
 				...profile
